@@ -10,7 +10,7 @@ const TodoList = ({ todos, addTodo, removeTodo }) => (
             {todos.map(todo => (
                 <li key={todo.id}>
                     {todo.text}{" "}
-                    <button onClick={() => removeTodo(todo.text)}>X</button>
+                    <button onClick={() => removeTodo(todo.id)}>X</button>
                 </li>
             ))}
             <button onClick={() => addTodo("teste3")}>Adicionar</button>

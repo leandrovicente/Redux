@@ -7,7 +7,7 @@ export default function todos(state = INITAL_STATE, action) {
         case "ADD_TODO":
             return [...state, { id: Math.random, text: action.payload.text }];
         case "REMOVE_TODO":
-            return state.filter(todo => todo.id != action.payload.id);
+            return state.filter(todo => todo.id !== action.payload.id);
         default:
             return state;
     }
